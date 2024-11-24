@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering on different devices -->
+    <title>QuickTaxi Mockup</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to the CSS file for styling -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div id="header-container">
+            <div id="left-links">
+                <a href="#" id="help-link">Help</a> <!-- Help link on the left -->
+            </div>
+            <h1 id="logo">QuickTaxi</h1> <!-- Logo centered -->
+            <div id="right-links">
+                <a href="#">Products</a>
+                <a href="#">Log in</a>
+                <a href="#" id="signup-button">Sign up</a> <!-- Sign-up button styled differently -->
+            </div>
+        </div>
+    </header>
+    
+    <!-- Get a Ride Form Section -->
+    <section id="get-ride">
+        <div id="ride-container">
+            <h1 id="ride-title">Request a ride</h1>
+            <div class="form-container">
+                <div class="input-container">
+                    <label for="pickup-location"></label>
+                    <div class="input-wrapper">  
+                        
+                        <span class="tooltip-left">Manually enter an address</span> 
+                        <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter Pickup location"> <!-- Placeholder text inside the input field -->
+                        <button class="icon-button" id="allow-location-button">
+                            <span class="tooltip">Allow location access</span> <!-- Tooltip above the location icon -->
+                            <img src="location-icon.png" alt="Location Icon" class="location-icon"> <!-- Location icon (replace with your image) -->
+                        </button>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="dropoff-location"></label>
+                    <input type="text" id="dropoff-location" name="dropoff-location" placeholder="Enter Drop-off location "> <!-- Placeholder text inside the input field -->
+                </div>
+                <button id="book-now-button">Book Now</button>
+            </div>
+        </div>
+    </section>
+<!-- Custom Dialog -->
+
+<div id="custom-dialog" class="custom-dialog">
+    <div class="dialog-content">
+        <div class="dialog-header">
+            <div class="dialog-header-left">
+                
+                <span class="dialog-title">quicktaxi.com wants to</span>
+            </div>
+            <button class="close-dialog" onclick="closeDialog()">×</button>
+        </div>
+        
+        <div class="dialog-message">
+            <img src="location-icon1.png" alt="Location Icon" class="dialog-icon-small">
+            <span>Use your location</span>
+        </div>
+        
+        
+        <div class="dialog-actions">
+            <button onclick="handleLocationPermission(false)" class="dialog-button block-button">Block</button>
+            <button onclick="handleLocationPermission(true)" class="dialog-button allow-button">Allow</button>
+        </div>
+    </div>
+</div>
+<!-- Custom Alert Dialog -->
+<div id="custom-alert" class="custom-alert">
+    <div class="alert-content">
+        <span id="alert-message" class="alert-message"></span>
+        <button class="close-alert-button" onclick="closeCustomAlert()">OK</button>
+    </div>
+</div>
+
+    <script src="script.js">    
+    
+    </script> <!-- Link to the JavaScript file if needed -->
+</body>
+</html> 
+
